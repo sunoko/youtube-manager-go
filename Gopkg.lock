@@ -2,6 +2,14 @@
 
 
 [[projects]]
+  digest = "1:76dc72490af7174349349838f2fe118996381b31ea83243812a97e5a0fd5ed55"
+  name = "github.com/dgrijalva/jwt-go"
+  packages = ["."]
+  pruneopts = "UT"
+  revision = "06ea1031745cb8b3dab3f6a236daf2b0aa468b7e"
+  version = "v3.2.0"
+
+[[projects]]
   digest = "1:8d029fb6638c2f922b8b5a33aef0f07a44542a97a0cf89bf871dd837f6b3252d"
   name = "github.com/klauspost/compress"
   packages = [
@@ -14,19 +22,24 @@
   version = "v1.11.1"
 
 [[projects]]
-  digest = "1:bf618941b014c2a86e4a6f39d4a26541c06fc63387fc50d4694d67eac2151f4a"
+  digest = "1:efd601ad1d1189884f37ed075fadb5bbd17f1f5acf5862827247c6da56d125ba"
   name = "github.com/labstack/echo"
-  packages = ["."]
+  packages = [
+    ".",
+    "middleware",
+  ]
   pruneopts = "UT"
   revision = "38772c686c76b501f94bd6cd5b77f5842e93b559"
   version = "v3.3.10"
 
 [[projects]]
-  digest = "1:9bc108827ac1d8783dea294f1ef07732fa4ca7d6e20518c04888a85828eba4ce"
+  digest = "1:e8e65826d60fd82637fb9df06ecd651191b599f4a8f72b86362012f288778320"
   name = "github.com/labstack/gommon"
   packages = [
+    "bytes",
     "color",
     "log",
+    "random",
   ]
   pruneopts = "UT"
   revision = "4919956f6fb227b548f004da27c7c6b20fba499f"
@@ -47,6 +60,14 @@
   pruneopts = "UT"
   revision = "7b513a986450394f7bbf1476909911b3aa3a55ce"
   version = "v0.0.12"
+
+[[projects]]
+  digest = "1:1760ee71834b3d0c59ffb6e0f9444fb68aec64bd6630b99b349fb111f74022fa"
+  name = "github.com/sirupsen/logrus"
+  packages = ["."]
+  pruneopts = "UT"
+  revision = "6699a89a232f3db797f2e280639854bbc4b89725"
+  version = "v1.7.0"
 
 [[projects]]
   digest = "1:c468422f334a6b46a19448ad59aaffdfc0a36b08fdcc1c749a0b29b6453d7e59"
@@ -97,11 +118,12 @@
 
 [[projects]]
   branch = "master"
-  digest = "1:e90e42ba6a9ffb6fdf3a89c97531360858e17162b8010567b57c4d63fde87879"
+  digest = "1:6a9357996167c7ef3e91b7b735d5d813d8a7763404dc9076537a8f33b9ba493f"
   name = "golang.org/x/sys"
   packages = [
     "internal/unsafeheader",
     "unix",
+    "windows",
   ]
   pruneopts = "UT"
   revision = "2da7054afaeb62259b1cc931cdaca533392f2c77"
@@ -136,6 +158,8 @@
   analyzer-version = 1
   input-imports = [
     "github.com/labstack/echo",
+    "github.com/labstack/echo/middleware",
+    "github.com/sirupsen/logrus",
     "github.com/valyala/fasthttp",
   ]
   solver-name = "gps-cdcl"
